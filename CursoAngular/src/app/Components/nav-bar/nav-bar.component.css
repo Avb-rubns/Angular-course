@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    justify-content:space-between;
+}
+nav{
+
+     display: flex;
+     gap: 1rem;
+     width: max-content;
+}
+img{
+    height: 16px;
+    width: 16px;
+    background-color: brown;
+}

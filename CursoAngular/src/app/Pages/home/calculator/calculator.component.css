@@ -1,0 +1,6 @@
+.negative{
+    color: var(--redTest);
+}
+.positive{
+    color: var(--greenTest);
+}

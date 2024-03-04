@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <tr>
+        <td scope="col">id</td>
+        <td scope="col"> name</td>
+        <td scope="col">lastname</td>
+    </tr>
+    @for (usr of this.Users; track $index) {
+        <tr>
+            <td [ngClass]="usr.id % 2 === 0 ? 'positive':'negative'" >{{usr.id}}</td>
+            <td>{{usr.nombre}}</td>
+            <td>{{usr.apellido}}</td>
+        </tr>
+    }
+</table>
+
+
+<div class="d-flex flex-column ">
+    <span >Id:<input type="text" [(ngModel)]="this.UserReq.id"></span>
+    <span>nombre:<input type="text" [(ngModel)]="this.UserReq.userName"></span>
+    <button (click)="SendUser()" class="btn btn-primary" >Enviar</button>
+</div>

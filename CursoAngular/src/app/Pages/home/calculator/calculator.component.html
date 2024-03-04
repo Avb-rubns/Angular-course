@@ -1,0 +1,25 @@
+<div>
+    <input  [(ngModel)]="sum1" >
+    +
+    <input  [(ngModel)]="sum2">
+    <div>
+        <span>Resultado:</span>
+        <span [ngClass]=" validate() " >{{result}}</span>
+    </div>
+    <button (click)="this.suma()">Sumar</button>
+</div>
+<table class="table table-striped table-sm">
+    <tr>
+        <td scope="col">id</td>
+        <td scope="col"> name</td>
+        <td scope="col">lastname</td>
+    </tr>
+    @for (usr of this.users; track $index) {
+        <tr>
+            <td [ngClass]="usr.id % 2 === 0 ? 'positive':'negative'" >{{usr.id}}</td>
+            <td> <input type="text" [(ngModel)]="usr.name"> {{usr.name}}</td>
+            <td>{{usr.lastname}}</td>
+        </tr>
+    }
+</table>
+<button class="btn btn-primary" (click)="show()" >Imprimir en consola</button>
